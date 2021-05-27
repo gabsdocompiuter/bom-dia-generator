@@ -37,7 +37,9 @@ class ImageHelper:
 
     def add_text(self, image, font_asset, message):
         image_draw = ImageDraw.Draw(image)
+        print(font_asset)
         image_font = ImageFont.truetype(font_asset, 80)
+
 
         width, height = image.size
 
@@ -57,4 +59,4 @@ class ImageHelper:
             image_draw.text((position_x, position_y), line, font=image_font, fill=text_color)
             position_y += text_height
 
-        image.show()
+        return image
